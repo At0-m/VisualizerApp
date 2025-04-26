@@ -1,0 +1,85 @@
+digraph AST {
+a54[label="Function"];
+a55[label="int"];
+a54 -> a55[label = "type"]; 
+a56[label="main"];
+a54 -> a56[label = "name"]; 
+a57[label="Parameters"];
+a54 -> a57[label = "parameters"]; 
+a58[label="Body"];
+a54 -> a58[label = "body"]; 
+a60[label="int number"];
+a58 -> a60
+a62[label="long factorial"];
+a58 -> a62
+a58 -> a63
+a63[label="printf"];
+a64[label="Введите число:\n"];
+a63 -> a64
+a58 -> a65
+a65[label="scanf"];
+a66[label="%d"];
+a65 -> a66
+a65 -> a67
+a67[label="&int "];
+a58 -> a69
+a69[label="while"];
+a69 -> a70[label = "condition"]; 
+a71[label="number"];
+a72[label="-1"];
+a70 -> a72
+a70 -> a71
+a70[label="!="];
+a69 -> a74[label = "body"]; 
+a74[label="Body"];
+a76[label="factorial"];
+a77[label="1"];
+a74 -> a75
+a75 -> a77
+a75 -> a76
+a75[label="="];
+a74 -> a79
+a79[label="for "];
+a81[label="int i=1"];
+a79 -> a81[label = "initialization"]; 
+a79 -> a82[label = "condition"]; 
+a83[label="i"];
+a84[label="number"];
+a82 -> a84
+a82 -> a83
+a82[label="<="];
+a79 -> a86[label = "step"]; 
+a86[label="i"];
+a86 -> a87
+a87[label="++"];
+a79 -> a88[label = "body"]; 
+a88[label="Body"];
+a90[label="factorial"];
+a92[label="factorial"];
+a93[label="i"];
+a91 -> a93
+a91 -> a92
+a91[label="*"];
+a88 -> a89
+a89 -> a91
+a89 -> a90
+a89[label="="];
+a74 -> a96
+a96[label="printf"];
+a97[label="Факториал равен %ld\n"];
+a96 -> a97
+a98[label="factorial"];
+a96 -> a98
+a74 -> a99
+a99[label="printf"];
+a100[label="Введите число"];
+a99 -> a100
+a74 -> a101
+a101[label="scanf"];
+a102[label="%d"];
+a101 -> a102
+a101 -> a103
+a103[label="&int "];
+a58 -> a105
+a105[label="retrun 0"];
+}

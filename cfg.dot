@@ -1,0 +1,38 @@
+digraph all_functions {
+subgraph cluster_main {
+   label="main";
+   main_0 [label="int main()", shape=oval];
+   main_0 -> main_1;
+   main_1 [label="int number", shape=box];
+   main_1 -> main_2;
+   main_2 [label="long factorial", shape=box];
+   main_2 -> main_3;
+   main_3 [label="printf(Введите число:\\n)", shape=box];
+   main_3 -> main_4;
+   main_4 [label="scanf(%d, &int*)", shape=box];
+   main_4 -> main_5;
+   main_5 [label="number != -1", shape=diamond];
+   main_5 -> main_6 [color="green", label="True"];
+   main_5 -> main_14 [color="red", label="False"];
+   main_6 [label="factorial = 1", shape=box];
+   main_6 -> main_7;
+   main_7 [label="int i = 1", shape=box];
+   main_7 -> main_8;
+   main_8 [label="i <= number", shape=diamond];
+   main_8 -> main_9 [color="green", label="True"];
+   main_8 -> main_11 [color="red", label="False"];
+   main_9 [label="factorial = factorial * i", shape=box];
+   main_9 -> main_10;
+   main_10 [label="i++", shape=box];
+   main_10 -> main_8;
+   main_11 [label="printf(Факториал равен %ld\\n, factorial)", shape=box];
+   main_11 -> main_12;
+   main_12 [label="printf(Введите число)", shape=box];
+   main_12 -> main_13;
+   main_13 [label="scanf(%d, &int*)", shape=box];
+   main_13 -> main_5;
+   main_14 [label="return 0", shape=oval];
+}
+
+}
+
